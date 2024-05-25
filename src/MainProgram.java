@@ -101,10 +101,15 @@ public class MainProgram {
         bandara.addEdge(BEJ, CGK, 1485);
         // -----------------------------------------------------------------
         // SAMARINDA
+        // GHS, CGK, SUB, YIA ; BEJ udah
+        bandara.addEdge(AAP, GHS, 151); 
         bandara.addEdge(AAP, CGK, 1309); 
         bandara.addEdge(AAP, SUB, 895); 
         bandara.addEdge(AAP, YIA, 1106); 
         // -----------------------------------------------------------------
+        
+        
+        
         // Gak ada ke BEJ, AAP, SMQ, PKN, PKY, PNK, BDJ; udah ada BPN
         bandara.addEdge(TRK, CGK, 1595);
 
