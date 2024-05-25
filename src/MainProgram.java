@@ -50,29 +50,34 @@ public class MainProgram {
         Vertex PGK = new Vertex("Bandar Udara Depati Amir(PGK) - PangkalPinang");
 
         WeightedGraph<Vertex> bandara = new WeightedGraph<Vertex>(false); // Undirected
+        // -----------------------------------------------------------------
+        // BALIKPAPAN
         // Gak ada ke AAP, SMQ, PKN
         bandara.addEdge(BPN, BDJ, 342); 
         bandara.addEdge(BPN, BEJ, 370);
         bandara.addEdge(BPN, TRK, 512); 
         bandara.addEdge(BPN, PKY, 344);
         bandara.addEdge(BPN, PNK, 846);
-
         bandara.addEdge(BPN, SRG, 958);
         bandara.addEdge(BPN, YIA, 1025);
         bandara.addEdge(BPN, SOC, 970);
         bandara.addEdge(BPN, SUB, 809);
         bandara.addEdge(BPN, BTH, 1451);
         bandara.addEdge(BPN, KNO, 2091);
-
         bandara.addEdge(BPN, CGK, 1241);
-
+        // -----------------------------------------------------------------
         // Gak ada ke TRK, SMQ, PKN, PKY, BDJ, PNK; udah ada BPN
+        // BERAU
         bandara.addEdge(BEJ, AAP, 284);
+        bandara.addEdge(BEJ, SUB, 1154);
         bandara.addEdge(BEJ, CGK, 1485);
-
+        // -----------------------------------------------------------------
         // Gak ada ke BPN, TRK, SMQ, PKN, BDJ, PKY, PNK; udah ada BEJ 
+        // SAMARINDA
         bandara.addEdge(AAP, CGK, 1309); 
-
+        bandara.addEdge(AAP, SUB, 895); 
+        bandara.addEdge(AAP, YIA, 1106); 
+        // -----------------------------------------------------------------
         // Gak ada ke BEJ, AAP, SMQ, PKN, PKY, PNK, BDJ; udah ada BPN
         bandara.addEdge(TRK, CGK, 1595);
 
