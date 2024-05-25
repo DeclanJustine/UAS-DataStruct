@@ -15,7 +15,7 @@ class Vertex{
 
 public class MainProgram {
     public static void main(String[] args) {
-        // Bandara Kalimantan
+        // Wilayah Kalimantan - 18
         Vertex BPN = new Vertex("Bandar Udara Internasional Sultan Aji Muhammad Sulaiman Sepinggan(BPN) - Balikpapan");
         Vertex BEJ = new Vertex("Bandar Udara Kalimarau(BEJ) - Berau");
         Vertex AAP = new Vertex("Bandar Udara Aji Pangeran Tumenggung Pranoto(AAP) - Samarinda");
@@ -35,21 +35,21 @@ public class MainProgram {
         Vertex BTW = new Vertex("Bandar Udara Batu Licin(BTW) - Batulicin");
         Vertex KBU = new Vertex("Bandar Udara Gusti Sjamsir Alam(KBU) - Kotabaru");
 
-        // Bandara Sumatera
+        // Wilayah Sumatera - 20
         Vertex BTJ = new Vertex("Bandar Udara Internasional Sultan Iskandar Muda(BTJ) - BandaAceh");
-        Vertex LSW = new Vertex("");
-        Vertex MEQ = new Vertex("");
-        Vertex LKI = new Vertex("");
-        Vertex KNO = new Vertex("Kualanamu International Airport(KNO) - Medan");
+        Vertex LSW = new Vertex("Bandar Udara Malikussaleh(LSW) - Lhokseumawe");
+        Vertex MEQ = new Vertex("Bandar Udara Cut Nyak Dhien(MEQ) - Meulaboh");
+        Vertex LKI = new Vertex("Bandar Udara Lasikin(LKI) - Sinabang");
+        Vertex KNO = new Vertex("Bandar Udara Internasional Kualanamu(KNO) - Medan");
         Vertex DTB = new Vertex("Bandar Udara Internasional Sisingamangaraja XII(DTB) - Tapanuli"); 
-        Vertex FLZ = new Vertex("");
+        Vertex FLZ = new Vertex("Bandar Udara Dr. Ferdinand Lumban Tobing(FLZ) - Sibolga");
         Vertex GNS = new Vertex("Bandar Udara Binaka Gunungsitoli Nias(GNS) - Nias");
-        Vertex PKU = new Vertex("Bandara Internasional Sultan Syarif Kasim II(PKU) - Pekanbaru");
+        Vertex PKU = new Vertex("Bandar Udara Internasional Sultan Syarif Kasim II(PKU) - Pekanbaru");
         Vertex BTH = new Vertex("Bandar Udara Internasional Hang Nadim(BTH) - Batam");
-        Vertex TNJ = new Vertex("Bandara Raja Haji Fisabilillah Tanjung Pinang(TNJ) - TanjungPinang");
+        Vertex TNJ = new Vertex("Bandar Udara Raja Haji Fisabilillah Tanjung Pinang(TNJ) - TanjungPinang");
         Vertex PDG = new Vertex("Bandar Udara Internasional Minangkabau(PDG) - Padang");
-        Vertex BUU = new Vertex("");
-        Vertex DJB = new Vertex("Bandara Internasional Sultan Thaha(DJB) - Jambi");
+        Vertex BUU = new Vertex("Bandar Udara Muara Bungo(BUU) - Muara Bungo");
+        Vertex DJB = new Vertex("Bandar Udara Internasional Sultan Thaha(DJB) - Jambi");
         Vertex BKS = new Vertex("Bandar Udara Fatmawati Soekarno(BKS) - Bengkulu");
         Vertex LLJ = new Vertex("Bandar Udara Silampari(LLJ) - LubukLinggau");
         Vertex PLM = new Vertex("Bandar Udara Internasional Sultan Mahmud Badaruddin II(PLM) - Palembang");
@@ -57,16 +57,21 @@ public class MainProgram {
         Vertex PGK = new Vertex("Bandar Udara Depati Amir(PGK) - PangkalPinang");
         Vertex TJQ = new Vertex("Bandar Udara Internasional H.A.S. Hanandjoeddin(TJQ) - TanjungPandan");
 
-
-        Vertex BWX = new Vertex("Bandar Udara Internasional Banyuwangi(BWX) - Banyuwangi");      
-        Vertex DHX = new Vertex("Bandara Internasional Dhoho Kediri(DHX) - Kediri");      
-        Vertex CGK = new Vertex("Bandar Udara Internasional Soekarno Hatta(CGK) - Jakarta");
-        Vertex MLG = new Vertex("Bandar Udara Abdulrachman Saleh(MLG) - Malang");
-        Vertex SRG = new Vertex("Bandar Udara Jenderal Ahmad Yani(SRG) - Semarang");
-        Vertex SUB = new Vertex("Bandara Internasional Juanda(SUB) - Surabaya");
+        // Wilayah Jawa - 12
+        Vertex BWX = new Vertex("Bandar Udara Internasional Banyuwangi(BWX) - Banyuwangi");  
+        Vertex MLG = new Vertex("Bandar Udara Abdulrachman Saleh(MLG) - Malang");    
+        Vertex SUB = new Vertex("Bandar Udara Internasional Juanda(SUB) - Surabaya");
+        Vertex DHX = new Vertex("Bandar Udara Internasional Dhoho Kediri(DHX) - Kediri"); 
         Vertex SOC = new Vertex("Bandar Udara Adi Soemarmo(SOC) - Surakarta");
+        Vertex SRG = new Vertex("Bandar Udara Jenderal Ahmad Yani(SRG) - Semarang");
+        Vertex YIA = new Vertex("Bandar Udara Internasional Yogyakarta(YIA) - Yogyakarta");
+        Vertex JOG = new Vertex("Bandar Udara Adi Sutjipto(JOG) - Yogyakarta");
+        Vertex CJN = new Vertex("Bandar Udara Cijulang Nasawiru(CJN) - Pangandaran");
         Vertex BDO = new Vertex("Bandar Udara Internasional Husein Sastranegara(BDO) - Bandung");
-        Vertex YIA = new Vertex("Bandara Internasional Yogyakarta(YIA) - Yogyakarta");
+        Vertex HLP = new Vertex("Bandar Udara Halim Perdanakusuma(HLP) - Jakarta");
+        Vertex CGK = new Vertex("Bandar Udara Internasional Soekarno Hatta(CGK) - Jakarta");
+    
+        
 
         WeightedGraph<Vertex> bandara = new WeightedGraph<Vertex>(false); // Undirected
         // -----------------------------------------------------------------
