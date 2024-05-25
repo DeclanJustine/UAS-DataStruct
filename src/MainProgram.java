@@ -132,14 +132,21 @@ public class MainProgram {
         bandara.addEdge(BDJ, YIA, 683);
         bandara.addEdge(BDJ, SUB, 483);
         // -----------------------------------------------------------------
-
-        // Gak ada BEJ, AAP, TRK, SMQ, PKN, BDJ, PNK; udah ada BPN
+        // PALANGKARAYA - 3
+        // CGK, SUB ; BPN udah
         bandara.addEdge(PKY, CGK, 901);
-
-        // Gak ada BEJ, AAP, TRK, SMQ, PKN, BDJ, PKY ; udah ada BPN
+        bandara.addEdge(PKY, SUB, 576);
+        // -----------------------------------------------------------------
+        // PONTIANAK - 9
+        // BTH, CGK, YIA, SOC, SUB, KTG, SQG, PSU ; BPN udah
+        bandara.addEdge(PNK, BTH, 603);
         bandara.addEdge(PNK, CGK, 739);
-
-        // KALIMANTAN KELAR
+        bandara.addEdge(PNK, YIA, 872);
+        bandara.addEdge(PNK, SOC, 856);
+        bandara.addEdge(PNK, SUB, 889);
+        bandara.addEdge(PNK, KTG, 216);
+        bandara.addEdge(PNK, SQG, 239);
+        bandara.addEdge(PNK, PSU, 411);
         // -----------------------------------------------------------------------------------------
 
     }
