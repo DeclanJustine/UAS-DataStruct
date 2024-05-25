@@ -124,13 +124,15 @@ public class MainProgram {
         bandara.addEdge(PKN, SRG, 492);
         bandara.addEdge(PKN, SUB, 522);
         // -----------------------------------------------------------------
-        // BANJARMASIN - 6
-        // HMS, CGK, SRG, YIA, SUB ; BPN udah
+        // BANJARMASIN - 8
+        // HMS, CGK, SRG, YIA, SUB, BTW, KBU ; BPN udah
         bandara.addEdge(BDJ, HMS, 265);
         bandara.addEdge(BDJ, CGK, 917);
         bandara.addEdge(BDJ, SRG, 615);
         bandara.addEdge(BDJ, YIA, 683);
         bandara.addEdge(BDJ, SUB, 483);
+        bandara.addEdge(BDJ, BTW, 156);
+        bandara.addEdge(BDJ, KBU, 174);
         // -----------------------------------------------------------------
         // PALANGKARAYA - 3
         // CGK, SUB ; BPN udah
@@ -147,7 +149,22 @@ public class MainProgram {
         bandara.addEdge(PNK, KTG, 216);
         bandara.addEdge(PNK, SQG, 239);
         bandara.addEdge(PNK, PSU, 411);
-        // -----------------------------------------------------------------------------------------
+        // -----------------------------------------------------------------
+        // MALINAU - 2; BPN, TRK
+        // TANJUNG SELOR - 1; BPN
+        // MELAK - 2; BPN, AAP
+        // MUARA TEWEH - 1; BDJ
+        // PUTUSSIBAU - 1; PNK
+        // SINTANG - 1; SQG
+        // BATU LICIN - 1; BDJ
+        // KOTABARU - 1; BDJ
+        // -----------------------------------------------------------------
+        // KETAPANG - 2
+        // SRG; PNK udah
+        bandara.addEdge(KTG, SRG, 570); 
+        // -----------------------------------------------------------------
 
+        // -----------------------------------------------------------------
+        
     }
 }
