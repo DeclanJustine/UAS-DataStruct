@@ -75,20 +75,24 @@ public class MainProgram {
 
         WeightedGraph<Vertex> bandara = new WeightedGraph<Vertex>(false); // Undirected
         // -----------------------------------------------------------------
-        // BALIKPAPAN
-        // Gak ada ke AAP, SMQ, PKN
+        // BALIKPAPAN - 16
+        // BDJ, BEJ, TRK, PKY, PNK, GHS, LNU, TJS, SRG, YIA, SOC, SUB, BTH, KNO, CGK, HLP
         bandara.addEdge(BPN, BDJ, 342); 
         bandara.addEdge(BPN, BEJ, 370);
         bandara.addEdge(BPN, TRK, 512); 
         bandara.addEdge(BPN, PKY, 344);
         bandara.addEdge(BPN, PNK, 846);
+        bandara.addEdge(BPN, GHS, 160);
+        bandara.addEdge(BPN, LNU, 537);
+        bandara.addEdge(BPN, TJS, 460);
         bandara.addEdge(BPN, SRG, 958);
         bandara.addEdge(BPN, YIA, 1025);
         bandara.addEdge(BPN, SOC, 970);
         bandara.addEdge(BPN, SUB, 809);
         bandara.addEdge(BPN, BTH, 1451);
         bandara.addEdge(BPN, KNO, 2091);
-        bandara.addEdge(BPN, CGK, 1241);
+        bandara.addEdge(BPN, CGK, 1254);
+        bandara.addEdge(BPN, HLP, 1241);
         // -----------------------------------------------------------------
         // Gak ada ke TRK, SMQ, PKN, PKY, BDJ, PNK; udah ada BPN
         // BERAU
