@@ -57,14 +57,14 @@ public class MainProgram {
         bandara.addEdge(BPN, PKY, 344);
         bandara.addEdge(BPN, PNK, 846);
 
-        bandara.addEdge(BPN, CGK, 1241);
-
         bandara.addEdge(BPN, SRG, 958);
         bandara.addEdge(BPN, YIA, 1025);
         bandara.addEdge(BPN, SOC, 970);
         bandara.addEdge(BPN, SUB, 809);
         bandara.addEdge(BPN, BTH, 1451);
         bandara.addEdge(BPN, KNO, 2091);
+
+        bandara.addEdge(BPN, CGK, 1241);
 
         // Gak ada ke TRK, SMQ, PKN, PKY, BDJ, PNK; udah ada BPN
         bandara.addEdge(BEJ, AAP, 284);
