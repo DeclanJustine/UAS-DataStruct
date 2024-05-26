@@ -66,14 +66,13 @@ public class MainProgram {
         Vertex SRG = new Vertex("Bandar Udara Jenderal Ahmad Yani(SRG) - Semarang");
         Vertex YIA = new Vertex("Bandar Udara Internasional Yogyakarta(YIA) - Yogyakarta");
         Vertex JOG = new Vertex("Bandar Udara Adi Sutjipto(JOG) - Yogyakarta");
-        Vertex CJN = new Vertex("Bandar Udara Cijulang Nasawiru(CJN) - Pangandaran");
-        Vertex BDO = new Vertex("Bandar Udara Internasional Husein Sastranegara(BDO) - Bandung");
         Vertex HLP = new Vertex("Bandar Udara Halim Perdanakusuma(HLP) - Jakarta");
         Vertex CGK = new Vertex("Bandar Udara Internasional Soekarno Hatta(CGK) - Jakarta");
     
         
 
         WeightedGraph<Vertex> jarak = new WeightedGraph<Vertex>(false); // Undirected
+        WeightedGraph<Vertex> harga = new WeightedGraph<Vertex>(false); // Undirected
         // -----------------------------------------------------------------
         // BALIKPAPAN - 16
         // BDJ, BEJ, TRK, PKY, PNK, GHS, LNU, TJS, SRG, YIA, SOC, SUB, BTH, KNO, CGK, HLP
@@ -93,12 +92,31 @@ public class MainProgram {
         jarak.addEdge(BPN, KNO, 2091);
         jarak.addEdge(BPN, CGK, 1248);
         jarak.addEdge(BPN, HLP, 1241);
+        harga.addEdge(BPN, BDJ, 1251510); 
+        harga.addEdge(BPN, BEJ, 1652635);
+        harga.addEdge(BPN, TRK, 1171285); 
+        harga.addEdge(BPN, PKY, 1845175);
+        harga.addEdge(BPN, PNK, 1476140);
+        harga.addEdge(BPN, GHS, 1524275);
+        harga.addEdge(BPN, LNU, 2390705);
+        harga.addEdge(BPN, TJS, 1315690);
+        harga.addEdge(BPN, SRG, 1540320);
+        harga.addEdge(BPN, YIA, 1524275);
+        harga.addEdge(BPN, SOC, 1604500);
+        harga.addEdge(BPN, SUB, 1411960);
+        harga.addEdge(BPN, BTH, 2005625);
+        harga.addEdge(BPN, KNO, 2390705);
+        harga.addEdge(BPN, CGK, 1411960);
+        harga.addEdge(BPN, HLP, 1668680);
         // -----------------------------------------------------------------
         // BERAU - 4
         // AAP, SUB, CGK ; BPN udah
         jarak.addEdge(BEJ, AAP, 284);
         jarak.addEdge(BEJ, SUB, 1154);
         jarak.addEdge(BEJ, CGK, 1492);
+        harga.addEdge(BEJ, AAP, 1572410);
+        harga.addEdge(BEJ, SUB, 2069805);
+        harga.addEdge(BEJ, CGK, 2374660);
         // -----------------------------------------------------------------
         // SAMARINDA - 5
         // GHS, CGK, SUB, YIA ; BEJ udah
@@ -106,23 +124,35 @@ public class MainProgram {
         jarak.addEdge(AAP, CGK, 1316); 
         jarak.addEdge(AAP, SUB, 895); 
         jarak.addEdge(AAP, YIA, 1106); 
+        harga.addEdge(AAP, GHS, 1548275); 
+        harga.addEdge(AAP, CGK, 1604500); 
+        harga.addEdge(AAP, SUB, 1572410); 
+        harga.addEdge(AAP, YIA, 1748905); 
         // -----------------------------------------------------------------
         // TARAKAN - 4
         // LNU, CGK, SUB ; BPN udah
         jarak.addEdge(TRK, LNU, 107);
         jarak.addEdge(TRK, CGK, 1608);
         jarak.addEdge(TRK, SUB, 1293);    
+        harga.addEdge(TRK, LNU, 1398487);
+        harga.addEdge(TRK, CGK, 2053760);
+        harga.addEdge(TRK, SUB, 1877265);    
         // -----------------------------------------------------------------
         // SAMPIT - 2
         // CGK, SUB
         jarak.addEdge(SMQ, CGK, 790);
         jarak.addEdge(SMQ, SUB, 525);
+        harga.addEdge(SMQ, CGK, 1444050);
+        harga.addEdge(SMQ, SUB, 2278390);
         // -----------------------------------------------------------------
         // PANGKALAN BUN - 3
         // CGK, SRG, SUB
         jarak.addEdge(PKN, CGK, 332);
         jarak.addEdge(PKN, SRG, 492);
         jarak.addEdge(PKN, SUB, 522);
+        harga.addEdge(PKN, CGK, 1123150);
+        harga.addEdge(PKN, SRG, 1171285);
+        harga.addEdge(PKN, SUB, 1732860);
         // -----------------------------------------------------------------
         // BANJARMASIN - 8
         // HMS, CGK, SRG, YIA, SUB, BTW, KBU ; BPN udah
@@ -133,11 +163,20 @@ public class MainProgram {
         jarak.addEdge(BDJ, SUB, 483);
         jarak.addEdge(BDJ, BTW, 156);
         jarak.addEdge(BDJ, KBU, 174);
+        harga.addEdge(BDJ, HMS, 1448275);
+        harga.addEdge(BDJ, CGK, 1107105);
+        harga.addEdge(BDJ, SRG, 1155240);
+        harga.addEdge(BDJ, YIA, 1572410);
+        harga.addEdge(BDJ, SUB, 802250);
+        harga.addEdge(BDJ, BTW, 1058970);
+        harga.addEdge(BDJ, KBU, 1299645);
         // -----------------------------------------------------------------
         // PALANGKARAYA - 3
         // CGK, SUB ; BPN udah
         jarak.addEdge(PKY, CGK, 908);
         jarak.addEdge(PKY, SUB, 576);
+        harga.addEdge(PKY, CGK, 1428005);
+        harga.addEdge(PKY, SUB, 1251510);
         // -----------------------------------------------------------------
         // PONTIANAK - 9
         // BTH, CGK, YIA, SOC, SUB, KTG, SQG, PSU ; BPN udah
@@ -149,6 +188,14 @@ public class MainProgram {
         jarak.addEdge(PNK, KTG, 216);
         jarak.addEdge(PNK, SQG, 239);
         jarak.addEdge(PNK, PSU, 411);
+        harga.addEdge(PNK, BTH, 2358615);
+        harga.addEdge(PNK, CGK, 1091060);
+        harga.addEdge(PNK, YIA, 1428005);
+        harga.addEdge(PNK, SOC, 1588455);
+        harga.addEdge(PNK, SUB, 1460095);
+        harga.addEdge(PNK, KTG, 1107105);
+        harga.addEdge(PNK, SQG, 1251510);
+        harga.addEdge(PNK, PSU, 1716815);
         // -----------------------------------------------------------------
         // MALINAU - 2; BPN, TRK
         // TANJUNG SELOR - 1; BPN
@@ -162,6 +209,7 @@ public class MainProgram {
         // KETAPANG - 2
         // SRG; PNK udah
         jarak.addEdge(KTG, SRG, 570); 
+        harga.addEdge(KTG, SRG, 1816815); 
         // -----------------------------------------------------------------
 
         // -----------------------------------------------------------------
@@ -182,10 +230,25 @@ public class MainProgram {
         jarak.addEdge(KNO, HLP, 1414);
         jarak.addEdge(KNO, YIA, 1814);
         jarak.addEdge(KNO, SUB, 1972);
+        harga.addEdge(KNO, BTJ, 786205);
+        harga.addEdge(KNO, LSW, 1411960);
+        harga.addEdge(KNO, MEQ, 1492185);
+        harga.addEdge(KNO, LKI, 1382105);
+        harga.addEdge(KNO, GNS, 1251510);
+        harga.addEdge(KNO, FLZ, 1187330);
+        harga.addEdge(KNO, PDG, 834340);
+        harga.addEdge(KNO, PKU, 1010835);
+        harga.addEdge(KNO, BTH, 992790);
+        harga.addEdge(KNO, PLM, 1363825);
+        harga.addEdge(KNO, CGK, 1556365);
+        harga.addEdge(KNO, HLP, 1636590);
+        harga.addEdge(KNO, YIA, 2374660);
+        harga.addEdge(KNO, SUB, 2438840);
         // -----------------------------------------------------------------
         // BANDA ACEH - 2
         // CGK; KNO udah
         jarak.addEdge(BTJ, CGK, 1825);
+        harga.addEdge(BTJ, CGK, 1925400);
         // -----------------------------------------------------------------
         // LHOKSEUMAWE - 1; KNO
         // MEULABOH - 1; KNO
@@ -198,6 +261,9 @@ public class MainProgram {
         jarak.addEdge(DTB, CGK, 1256);
         jarak.addEdge(DTB, BTH, 577);
         jarak.addEdge(DTB, HLP, 1277);
+        harga.addEdge(DTB, CGK, 1492185);
+        harga.addEdge(DTB, BTH, 1267555);
+        harga.addEdge(DTB, HLP, 1829130);
         // -----------------------------------------------------------------
         // PEKANBARU - 6
         // BTH, CGK, HLP, YIA, SUB; KNO udah
@@ -206,12 +272,20 @@ public class MainProgram {
         jarak.addEdge(PKU, HLP, 953);
         jarak.addEdge(PKU, YIA, 1354);
         jarak.addEdge(PKU, SUB, 1523);
+        harga.addEdge(PKU, BTH, 673890);
+        harga.addEdge(PKU, CGK, 962700);
+        harga.addEdge(PKU, HLP, 1331735);
+        harga.addEdge(PKU, YIA, 1508230);
+        harga.addEdge(PKU, SUB, 2053760);
         // -----------------------------------------------------------------
         // PADANG - 4
         // BTH, CGK, HLP; KNO udah
         jarak.addEdge(PDG, BTH, 465);
         jarak.addEdge(PDG, CGK, 902);
         jarak.addEdge(PDG, HLP, 924);
+        harga.addEdge(PDG, BTH, 866430);
+        harga.addEdge(PDG, CGK, 1203375);
+        harga.addEdge(PDG, HLP, 1187330);
         // -----------------------------------------------------------------
         // BATAM - 13
         // DJB, PLM, PGK, CGK, YIA, SRG, SUB; KNO, DTB, PKU, PDG, PNK, BPN udah
@@ -222,26 +296,38 @@ public class MainProgram {
         jarak.addEdge(BTH, YIA, 1214);
         jarak.addEdge(BTH, SRG, 1146);
         jarak.addEdge(BTH, SUB, 1341);
+        harga.addEdge(BTH, DJB, 914565);
+        harga.addEdge(BTH, PLM, 802250);
+        harga.addEdge(BTH, PGK, 1219420);
+        harga.addEdge(BTH, CGK, 1123150);
+        harga.addEdge(BTH, YIA, 1829130);
+        harga.addEdge(BTH, SRG, 1909355);
+        harga.addEdge(BTH, SUB, 1508230);
         // -----------------------------------------------------------------
         // TANJUNG PINANG - 1
         // CGK
         jarak.addEdge(TNJ, CGK, 818);
+        harga.addEdge(TNJ, CGK, 1476140);
         // -----------------------------------------------------------------
         // MUARA BUNGO - 1
         // CGK
         jarak.addEdge(BUU, CGK, 715);
+        harga.addEdge(BUU, CGK, 1276140);
         // -----------------------------------------------------------------
         // JAMBI - 2
         // CGK; BTH udah
         jarak.addEdge(DJB, CGK, 609);
+        harga.addEdge(DJB, CGK, 978745);
         // -----------------------------------------------------------------
         // BENGKULU - 1
         // CGK
         jarak.addEdge(BKS, CGK, 557);
+        harga.addEdge(BKS, CGK, 1123150);
         // -----------------------------------------------------------------
         // LUBUKLINGGAU - 1
         // CGK
         jarak.addEdge(LLJ, CGK, 525);
+        harga.addEdge(LLJ, CGK, 1283600);
         // -----------------------------------------------------------------
         // PALEMBANG - 7
         // PGK, CGK, HLP, YIA, SUB; KNO, BTH udah
@@ -250,20 +336,30 @@ public class MainProgram {
         jarak.addEdge(PLM, HLP, 422);
         jarak.addEdge(PLM, YIA, 819);
         jarak.addEdge(PLM, SUB, 1002);
+        harga.addEdge(PLM, PGK, 545530);
+        harga.addEdge(PLM, CGK, 593665);
+        harga.addEdge(PLM, HLP, 609710);
+        harga.addEdge(PLM, YIA, 1540320);
+        harga.addEdge(PLM, SUB, 1423005);
         // -----------------------------------------------------------------
         // LAMPUNG - 2
         // CGK, YIA
         jarak.addEdge(TKG, CGK, 172);
         jarak.addEdge(TKG, YIA, 621);
+        harga.addEdge(TKG, CGK, 481350);
+        harga.addEdge(TKG, YIA, 1540320);
         // -----------------------------------------------------------------
         // PANGKAL PINANG - 4
         // TJQ, CGK; BTH, PLM udah
         jarak.addEdge(PGK, TJQ, 188);
         jarak.addEdge(PGK, CGK, 441);
+        harga.addEdge(PGK, TJQ, 433215);
+        harga.addEdge(PGK, CGK, 850385);
         // -----------------------------------------------------------------
         // TANJUNG PANDAN - 2
         // CGK; PGK udah
         jarak.addEdge(TJQ, CGK, 389);
+        harga.addEdge(TJQ, CGK, 738070);
         // -----------------------------------------------------------------
 
         // -----------------------------------------------------------------
@@ -271,58 +367,64 @@ public class MainProgram {
         // CGK, SUB
         jarak.addEdge(BWX, SUB, 208);
         jarak.addEdge(BWX, CGK, 868);
+        harga.addEdge(BWX, SUB, 2214210);
+        harga.addEdge(BWX, CGK, 1395915);
         // -----------------------------------------------------------------
         // MALANG - 2
         // CGK, HLP
         jarak.addEdge(MLG, CGK, 680);
         jarak.addEdge(MLG, HLP, 671);
+        harga.addEdge(MLG, CGK, 1283600);
+        harga.addEdge(MLG, HLP, 1123150);
         // -----------------------------------------------------------------
         // KEDIRI - 1
         // CGK
         jarak.addEdge(DHX, CGK, 621);
+        harga.addEdge(DHX, CGK, 1383600);
         // -----------------------------------------------------------------
         // SURABAYA - 16
         // CGK, HLP; KNO, PKU, BTH, PLM, PNK, PKN, SMQ, PKY, BDJ, BPN,
         // AAP, BEJ, TRK, BWX udah
         jarak.addEdge(SUB, HLP, 666);
         jarak.addEdge(SUB, CGK, 673);
+        harga.addEdge(SUB, HLP, 1091060);
+        harga.addEdge(SUB, CGK, 994790);
         // -----------------------------------------------------------------
         // SURAKARTA - 4
         // CGK, HLP; BPN, PNK udah
         jarak.addEdge(SOC, HLP, 468);
         jarak.addEdge(SOC, CGK, 478);
+        harga.addEdge(SOC, HLP, 882475);
+        harga.addEdge(SOC, CGK, 898520);
         // -----------------------------------------------------------------
         // YOGYAKARTA - 1
         // HLP
         jarak.addEdge(JOG, HLP, 437);
+        harga.addEdge(JOG, HLP, 882475);
         // -----------------------------------------------------------------
         // YOGYAKARTA - 11
         // CGK, HLP;KNO, PKU, PLM, TKG, BTH, PNK, BPN, BDJ, AAP udah
         jarak.addEdge(YIA, HLP, 405);
         jarak.addEdge(YIA, CGK, 412);
+        harga.addEdge(YIA, HLP, 946655);
+        harga.addEdge(YIA, CGK, 994790);
         // -----------------------------------------------------------------
         // SEMARANG - 7
         // CGK, HLP; BTH, KTG, PKN, BDJ, BPN udah
         jarak.addEdge(SRG, HLP, 407);
         jarak.addEdge(SRG, CGK, 418);
+        harga.addEdge(SRG, HLP, 898520);
+        harga.addEdge(SRG, CGK, 930610);
         // -----------------------------------------------------------------
-        // PANGANDARAN - 2
-        // HLP, BDO
-        jarak.addEdge(CJN, BDO, 124);
-        jarak.addEdge(CJN, HLP, 244);
-        // -----------------------------------------------------------------
-        // BANDUNG - 2
-        // HLP; CJN udah
-        jarak.addEdge(BDO, HLP, 121);
-        // -----------------------------------------------------------------
-        // JAKARTA - 14; KNO, DTB, PKU, PDG, PLM, BPN, BDO, CJN, SRG, YIA,
+        // JAKARTA - 13; KNO, DTB, PKU, PDG, PLM, BPN, SRG, YIA,
         // JOG, SOC, SUB, MLG
         // JAKARTA - 31
         // BTJ, KNO, DTB, PKU, PDG, BUU, BKS, LLJ, DJB, PLM, TKG, BTH, TNJ,
         // PGK, TJQ, PNK, PKN, SMQ, PKY, BDJ, BPN, AAP, BEJ, TRK, SRG, SOC,
         // YIA, SUB, DHX, MLG, BWX
         // -----------------------------------------------------------------
-        jarak.printGraph();
-        jarak.dijkstras(CGK, KNO);
+        jarak.printJarak();
+        jarak.jarakTerpendek(CGK, KNO);
+        harga.hargaTermurah(CGK, KNO);
     }
 }
