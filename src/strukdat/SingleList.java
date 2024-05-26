@@ -65,7 +65,7 @@ public class SingleList<T> {
         */
 		else {
 			while(curr != null) {
-				System.out.print(curr.data.toString() + " ");
+				System.out.print( " -> "+curr.data.toString() );
                 /*
                  * curr diupdate untuk menunjuk ke node selanjutnya
                  * sampai curr null, dimana curr diset ke bagian 'next' 
