@@ -423,7 +423,7 @@ public class MainProgram {
         // PGK, TJQ, PNK, PKN, SMQ, PKY, BDJ, BPN, AAP, BEJ, TRK, SRG, SOC,
         // YIA, SUB, DHX, MLG, BWX
         // -----------------------------------------------------------------
-        jarak.printJarak();
+        jarak.printGraph();
         jarak.jarakTerpendek(CGK, PNK);
         harga.hargaTermurah(CGK, PNK);
     }

@@ -134,17 +134,6 @@ public class SingleList<T> {
         if(head == null) return true;
         else return false;
     }
-
-    public T get(int index) {
-        Node<T> curr = head;
-        while(curr != null && index > 0) {
-            curr = curr.next;
-            index--;
-        }
-        return curr.data;
-    }
-
-
 }
 
 

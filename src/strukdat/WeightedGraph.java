@@ -17,10 +17,6 @@ class Edge<T> {
     public String toString() {
         return neighbor + "; " + weight;
     }
-
-    public T getNeighbor(){
-		return neighbor;
-	}
 }
 
 public class WeightedGraph<T> { 
@@ -46,7 +42,7 @@ public class WeightedGraph<T> {
     }
 
     // Print graph as hashmap, Time O(V+E), Space O(1)
-    public void printJarak() {
+    public void printGraph() {
         for (T key: adj.keySet()) {
             System.out.print(key.toString() + " :"); System.out.println();
             SingleList<Edge<T>> thelist = adj.get(key);
@@ -58,92 +54,6 @@ public class WeightedGraph<T> {
             }
             System.out.println();
         }
-    }
-
-    // DFS 
-    public void dfsTraversal(T key) {
-        if (!adj.containsKey(key)) // invalid input
-            return;
-        HashMap<T, Boolean> visited = new HashMap<>();
-        helper(key, visited);
-        System.out.println();
-    }
-
-    // DFS helper
-    private void helper(T v, HashMap<T, Boolean> visited) {
-        visited.put(v, true);
-        System.out.print(v.toString() + " ");
-        
-        SingleList<Edge<T>> edges = adj.get(v);
-        Node<Edge<T>> curr = edges.head;
-    
-        while (curr != null) {
-            Edge<T> edge = curr.data;
-            T neighbor = edge.neighbor;
-            if (visited.get(neighbor) == null) {
-                helper(neighbor, visited);
-            }
-            curr = curr.next;
-        }
-    }
-
-    // BFS
-    public void bfsTraversal(T key) {
-        if (!adj.containsKey(key)) // invalid input
-            return;
-        Queue<T> q = new LinkedList<>(); 
-        HashMap<T, Boolean> visited = new HashMap<>(); 
-        q.add(key); 
-        visited.put(key, true); 
-        while (!q.isEmpty()) { 
-            T v = q.poll(); 
-            System.out.print(v.toString() + " ");        
-    
-            SingleList<Edge<T>> edges = adj.get(v);
-            Node<Edge<T>> curr = edges.head;
-    
-            while (curr != null) {
-                Edge<T> edge = curr.data;
-                T neighbor = edge.neighbor;
-                if (visited.get(neighbor) == null) { 
-                    q.add(neighbor); 
-                    visited.put(neighbor, true); 
-                }
-                curr = curr.next;
-            }
-        } 
-        System.out.println(); 
-    }
-
-    public void deleteEdge(T a, T b) {
-		SingleList<Edge<T>> allEdgeA = adj.get(a);
-
-		int searchIndex = 0;
-		Edge<T> deleteEdgeA = allEdgeA.get(searchIndex);
-		while(deleteEdgeA.getNeighbor() != b && deleteEdgeA != null) {
-			searchIndex++;
-			deleteEdgeA = allEdgeA.get(searchIndex);
-		}
-		if(deleteEdgeA == null) {
-			return;
-		}
-		adj.get(a).remove(deleteEdgeA);
-            
-		if (!directed) { //undirected
-			SingleList<Edge<T>> allEdgeB = adj.get(b);
-
-			searchIndex = 0;
-			Edge<T> deleteEdge = allEdgeB.get(searchIndex);
-			while(deleteEdge.getNeighbor() != a && deleteEdge != null) {
-				searchIndex++;
-				deleteEdge = allEdgeB.get(searchIndex);
-			}
-			if(deleteEdge == null) {
-				return;
-			}
-			
-			adj.get(b).remove(deleteEdge);
-		}
     }
 
     @SuppressWarnings({ "unchecked", "rawtypes" })
@@ -174,7 +84,7 @@ public class WeightedGraph<T> {
         }
 
         if (res.get(target) == Integer.MAX_VALUE) {
-            System.out.println("No path from " + start + " to " + target);
+            System.out.println("Tidak ada jarak dari " + start + " ke " + target);
         } else {
             System.out.println("Jarak Terdekat dari [" + start + "] ke [" + target + "] dengan jarak " + res.get(target) + " km :");
             printPath(target, previous);
@@ -210,7 +120,7 @@ public class WeightedGraph<T> {
         }
 
         if (res.get(target) == Integer.MAX_VALUE) {
-            System.out.println("No path from " + start + " to " + target);
+            System.out.println("Tidak ada jarak dari " + start + " ke " + target);
         } else {
             System.out.println("Biaya Termurah dari [" + start + "] ke [" + target + "] dengan harga Rp " + res.get(target) + "  :");
             printPath(target, previous);
