@@ -424,7 +424,7 @@ public class MainProgram {
         // YIA, SUB, DHX, MLG, BWX
         // -----------------------------------------------------------------
         jarak.printJarak();
-        jarak.jarakTerpendek(CGK, KNO);
-        harga.hargaTermurah(CGK, KNO);
+        jarak.jarakTerpendek(CGK, PNK);
+        harga.hargaTermurah(CGK, PNK);
     }
 }

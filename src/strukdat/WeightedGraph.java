@@ -145,43 +145,6 @@ public class WeightedGraph<T> {
 			adj.get(b).remove(deleteEdge);
 		}
     }
-    /*
-     * Shortest Paths dari vertex v ke semua vertex lainnya 
-     * menggunakan Algoritma Dijkstra
-     * ==========================================================
-     */
-    @SuppressWarnings({ "unchecked", "rawtypes" })
-    public void dijkstra(T start) { // N = number of nodes
-        Map<T, Integer> res = new HashMap<>(); 
-        PriorityQueue<Map.Entry<T, Integer>> pq = new PriorityQueue<>((a,b) -> (int)(a.getValue() - b.getValue()));           
-        Map<T, T> previous = new HashMap<>();
-
-        for (T key : adj.keySet()) 
-            res.put(key, Integer.MAX_VALUE);
-        pq.offer(new AbstractMap.SimpleEntry(start, 0)); 
-        res.put(start, 0); 
-        while (!pq.isEmpty()) { 
-            T u = pq.poll().getKey(); 
-            SingleList<Edge<T>> thelist = adj.get(u);
-            Node<Edge<T>> curr = thelist.head;
-            while (curr != null) {
-                T v = curr.data.neighbor;
-                int weight = curr.data.weight; 
-                if (res.get(v) > res.get(u) + weight) { 
-                    res.put(v, res.get(u) + weight); 
-                    pq.offer(new AbstractMap.SimpleEntry(v, res.get(v))); 
-                    previous.put(v, u);
-                }
-                curr = curr.next; 
-            }
-        }
-
-        for (T vertex : res.keySet()) {
-            System.out.print("Shortest Path dari " + start + " ke " + vertex + " dengan weight: " + res.get(vertex) + " : ");
-            printPath(vertex, previous);
-            System.out.println();
-        }
-    }
 
     @SuppressWarnings({ "unchecked", "rawtypes" })
     public void jarakTerpendek(T start, T target) { 
@@ -213,7 +176,7 @@ public class WeightedGraph<T> {
         if (res.get(target) == Integer.MAX_VALUE) {
             System.out.println("No path from " + start + " to " + target);
         } else {
-            System.out.println("Shortest Path from [" + start + "] ke [" + target + "] dengan jarak " + res.get(target) + " km :");
+            System.out.println("Jarak Terdekat dari [" + start + "] ke [" + target + "] dengan jarak " + res.get(target) + " km :");
             printPath(target, previous);
             System.out.println();
         }
@@ -249,7 +212,7 @@ public class WeightedGraph<T> {
         if (res.get(target) == Integer.MAX_VALUE) {
             System.out.println("No path from " + start + " to " + target);
         } else {
-            System.out.println("Shortest Path from [" + start + "] ke [" + target + "] dengan harga Rp " + res.get(target) + "  :");
+            System.out.println("Biaya Termurah dari [" + start + "] ke [" + target + "] dengan harga Rp " + res.get(target) + "  :");
             printPath(target, previous);
             System.out.println();
         }
